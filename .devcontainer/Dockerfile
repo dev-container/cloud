@@ -9,6 +9,8 @@
 ARG VARIANT="3"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
+RUN pip3 install awscli 
+
 # [Optional] If your requirements rarely change, uncomment this section to add them to the image.
 #
 # COPY requirements.txt /tmp/pip-tmp/
