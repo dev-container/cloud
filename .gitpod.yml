@@ -1,0 +1,14 @@
+image:
+  file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - ms-python.python@2020.2.3:oethNcrfvC+cDEMhE0IYvg==
+    - vscode.yaml@1.45.1:MaZ9v4p9kS5M5nGNqIEgxQ==
+    - vscode.docker@1.45.1:eQ/pnJJVK3y7ID81nCWhTA==
+    - ms-azuretools.vscode-docker@1.0.0:lkwF6l0OviFw2Iyfgrl5VA==
+    - eamodio.gitlens@10.2.1:WIWu3zHU4VPT8r/v866LUw==
+
+tasks:
+  - init: 'echo "TODO: Replace with init/build command"'
+    command: 'echo "TODO: Replace with command to start project"'
