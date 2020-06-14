@@ -1,7 +1,11 @@
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/lcenchew/vscode-container-py)
 
-# Develop in Container - Python
-A setup for working on python in a vscode or gitpod container.
+# Develop in Container - Cloud
+A setup for working with cloud tools in a vscode or gitpod container.
+
+## Tools Installed
+
+- AWS CLI
 
 ## VS Code
 
