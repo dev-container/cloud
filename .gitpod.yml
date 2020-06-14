@@ -10,5 +10,5 @@ vscode:
     - eamodio.gitlens@10.2.1:WIWu3zHU4VPT8r/v866LUw==
 
 tasks:
-  - init: 'echo "TODO: Replace with init/build command"'
+  - init: 'complete -C aws_completer aws'
     command: 'echo "TODO: Replace with command to start project"'
