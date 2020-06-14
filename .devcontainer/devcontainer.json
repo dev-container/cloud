@@ -33,13 +33,15 @@
 		"ms-python.python",
 		"ms-azuretools.vscode-docker",
 		"eamodio.gitlens"
-	]
+	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	
+	"postCreateCommand": "complete -C aws_completer aws"
 
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode"
