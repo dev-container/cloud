@@ -32,7 +32,8 @@
 	"extensions": [
 		"ms-python.python",
 		"ms-azuretools.vscode-docker",
-		"eamodio.gitlens"
+		"eamodio.gitlens",
+		"amazonwebservices.aws-toolkit-vscode"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
