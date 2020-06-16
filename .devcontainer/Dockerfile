@@ -9,7 +9,12 @@
 ARG VARIANT="3"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
-RUN pip3 install awscli 
+RUN pip3 install awscli \
+    && pip3 install ansible \
+    && pip3 install argcomplete \
+    && rm -rf /tmp/pip-tmp \
+    && echo 'complete -C aws_completer aws' >> ~/.bashrc \
+    && echo 'activate-global-python-argcomplete' >> ~/.bashrc 
 
 # [Optional] If your requirements rarely change, uncomment this section to add them to the image.
 #
@@ -23,10 +28,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
      && apt-get -y install --no-install-recommends \
           groff \
+          vim \
+          jq \
 # Clean up
      && apt-get autoremove -y \
      && apt-get clean -y \
      && rm -rf /var/lib/apt/lists/*
 ENV DEBIAN_FRONTEND=dialog
-
-
