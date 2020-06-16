@@ -10,7 +10,7 @@ ARG VARIANT="3"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
 RUN pip3 install awscli \
-    && pip3 install ansible \
+    && pip3 install ansible==2.5 \
     && pip3 install argcomplete \
     && rm -rf /tmp/pip-tmp \
     && echo 'complete -C aws_completer aws' >> ~/.bashrc \
