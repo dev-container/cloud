@@ -35,7 +35,12 @@
 		"eamodio.gitlens",
 		"amazonwebservices.aws-toolkit-vscode"
 	],
-
+	
+	"mounts": [
+		"source=${localEnv:HOME}/local/.aws,target=/root/.aws,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/local/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+	],
+	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
