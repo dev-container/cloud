@@ -26,12 +26,22 @@ RUN pip3 install awscli \
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
-     && apt-get -y install --no-install-recommends \
+    && apt-get -y install --no-install-recommends \
           groff \
           vim \
           jq \
-# Clean up
-     && apt-get autoremove -y \
-     && apt-get clean -y \
-     && rm -rf /var/lib/apt/lists/*
+    # Clean up
+    && apt-get autoremove -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN echo "deb https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list \
+    && apt-get -y install apt-transport-https ca-certificates gnupg \
+    && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
+    && apt-get update && apt-get -y install google-cloud-sdk \
+    # Clean up
+    && apt-get autoremove -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/*
+
 ENV DEBIAN_FRONTEND=dialog
