@@ -3,6 +3,7 @@ image:
 
 vscode:
   extensions:
+    - vivaxy.vscode-conventional-commits@1.10.1:ztHr0xX5hkfQilbTTFitFw==
     - ms-python.python@2020.2.3:oethNcrfvC+cDEMhE0IYvg==
     - vscode.yaml@1.45.1:MaZ9v4p9kS5M5nGNqIEgxQ==
     - vscode.docker@1.45.1:eQ/pnJJVK3y7ID81nCWhTA==
