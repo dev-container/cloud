@@ -1,7 +1,8 @@
-# Basic dependabot.yml file with
-# minimum configuration for two package managers
+# https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
+updates:
+
   # Enable version updates for Docker
   - package-ecosystem: "docker"
     # Look for a `Dockerfile` in the `.devcontainer` directory
