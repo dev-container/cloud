@@ -10,6 +10,7 @@ ARG VARIANT="3"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
 RUN pip3 install awscli \
+    && pip3 install aws-sam-cli \
     && pip3 install ansible \
     && pip3 install argcomplete \
     && rm -rf /tmp/pip-tmp \
@@ -44,4 +45,12 @@ RUN echo "deb https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /et
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
+RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add - \
+    && apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main" \
+    && apt-get update && sudo apt-get -y install terraform \
+    # Clean up
+    && apt-get autoremove -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/*
+    
 ENV DEBIAN_FRONTEND=dialog
