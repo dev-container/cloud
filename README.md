@@ -6,6 +6,10 @@ A setup for working with cloud tools in a vscode or gitpod container.
 ## Tools Installed
 
 - AWS CLI
+- AWS SAM CLI
+- gcloud CLI
+- Ansible
+- Terraform
 
 ## VS Code
 
@@ -14,10 +18,14 @@ A setup for working with cloud tools in a vscode or gitpod container.
 - Run Docker Desktop
 - Open repo folder with VS Code using *Run Remote-Containers: Open Folder in Container...*
 
-Python 3 container is from https://github.com/microsoft/vscode-dev-containers/tree/master/containers/python-3
-ubuntu 18.04 based
+- Using Python 3 container from https://github.com/microsoft/vscode-dev-containers/tree/master/containers/python-3
+- Ubuntu 18.04 based
 
 ## Gitpod
+
+- Using `gitpod/workspace-full`
+- More information: https://www.gitpod.io/docs/config-docker/
+
 
 ### Setup for GitHub/GitLab
 
