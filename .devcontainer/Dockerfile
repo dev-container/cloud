@@ -31,10 +31,12 @@ RUN apt-get update \
           groff \
           vim \
           jq \
+          npm \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && npm install -g aws-cdk
 
 RUN echo "deb https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list \
     && apt-get -y install apt-transport-https ca-certificates gnupg \

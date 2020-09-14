@@ -41,4 +41,6 @@ RUN pip3 install awscli \
     && echo 'complete -C aws_completer aws' >> ~/.bashrc \
     && echo 'activate-global-python-argcomplete' >> ~/.bashrc 
 
+RUN npm install -g aws-cdk
+
 ENV DEBIAN_FRONTEND=dialog
