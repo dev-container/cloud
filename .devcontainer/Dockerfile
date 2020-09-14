@@ -32,6 +32,7 @@ RUN apt-get update \
           vim \
           jq \
           npm \
+          software-properties-common \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
